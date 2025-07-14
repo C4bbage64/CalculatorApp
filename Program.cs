@@ -13,11 +13,17 @@
 
             // Ask the user to type the first number.
             Console.WriteLine("Type a number, and the press Enter");
-            num1 = Convert.ToDouble(Console.ReadLine());
+            while (!double.TryParse(Console.ReadLine(), out num1))
+            {
+                Console.WriteLine("Invalid input. Please enter a valid integer:");
+            }
 
             // Ask the user to type the second number.
             Console.WriteLine("Type another number, and then press enter");
-            num2 = Convert.ToDouble(Console.ReadLine());
+            while (!double.TryParse(Console.ReadLine(), out num2))
+            {
+                Console.WriteLine("Invalid input. Please enter a valid integer:");
+            }
 
             // Ask the user to choose an option.
             Console.WriteLine("Choose an option from the following list:");
