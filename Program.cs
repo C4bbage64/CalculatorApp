@@ -1,8 +1,8 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace CalculatorApp
+namespace Calculator
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -60,7 +60,7 @@ namespace CalculatorApp
                 {
                     try
                     {
-                        result = Calculator.DoOperation(cleanNum1, cleanNum2, op);
+                        result = CalculatorLibrary.Calculator.DoOperation(cleanNum1, cleanNum2, op);
                         if (double.IsNaN(result))
                         {
                             Console.WriteLine("This operation will result in a mathmatical error.\n");
