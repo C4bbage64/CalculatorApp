@@ -2,7 +2,7 @@
 
 namespace CalculatorApp
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
@@ -47,12 +47,12 @@ namespace CalculatorApp
                 Console.WriteLine("\ts - Subtract");
                 Console.WriteLine("\tm - Multiply");
                 Console.WriteLine("\td - Divide");
-                Console.Write("Your option?");
+                Console.Write("Your option? ");
 
                 string? op = Console.ReadLine();
 
                 // Validate input is not null, and matches the pattern
-                if (op == null || !Regex.IsMatch(op, "[a|s|m|d]"))
+                if (op == null || !Regex.IsMatch(op, "^(a|s|m|d)$"))
                 {
                     Console.WriteLine("Error: Unrecognized input");
                 }
@@ -65,7 +65,7 @@ namespace CalculatorApp
                         {
                             Console.WriteLine("This operation will result in a mathmatical error.\n");
                         }
-                        else Console.WriteLine("Your result: {0:0.##\n", result);
+                        else Console.WriteLine("Your result: {0:0.##}\n", result);
                     }
                     catch (Exception e)
                     {
