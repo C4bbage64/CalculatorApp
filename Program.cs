@@ -1,4 +1,5 @@
 ﻿using System.Text.RegularExpressions;
+using CalculatorLibrary;
 
 namespace Calculator
 {
